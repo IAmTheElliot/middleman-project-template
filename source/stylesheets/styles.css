@@ -1,3 +1,33 @@
 #slides {
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
   display: none;
+  margin: 0 auto;
+}
+
+.form {
+  font-size: 12px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+tr {
+  display: block;
+  margin: 0 auto;
 }

@@ -6,28 +6,65 @@
   <meta name="description" content="">
   <meta name="author" content="Elliot T. Simpson">
   <meta lang="en">
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script type="text/javascript" src="./source/javascripts/validate.js"></script>
-  <script type="text/javascript" src="./source/javascripts/jquery.slides.js"></script>
-  <script type="text/javascript" src="./source/javascripts/app.js"></script>
+  <!-- <script type="text/javascript" src="./source/javascripts/validate.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="responsiveslides.js"></script>
   <link rel="stylesheet" href="./source/stylesheets/styles.css">
+  <!-- <script type="text/javascript" src="./source/javascripts/jquery.slides.js"></script> -->
+  <script type="text/javascript" src="source/javascripts/app.js"></script>
+  <link rel="stylesheet" href="responsiveslides.css">
 </head>
 <body>
   <h1>Welcome!<h1>
-    <p>Placeholder</p>
+    <h2>Please take a moment to register for our site!</h2>
+    <p>We appreciate your taking a minute to join our fine site! We promise you that you will enjoy your stay!</p>
+    <h2>Requirements</h2>
     <ul>
-      <li>Requirement 1: animated hero slideshow</fli>
-      <li>Requirement 2: image grid</li>
+      <li>#1: animated hero slideshow</fli>
+      <li>#2: image grid</li>
+      <li>#3: Registration form with Validation
+        <p>Note: This may have been just an example in the emailed directions, though I wanted to demonstrate this competency, as well as include product-roadmap ideas in some way.</p></li>
     </ul>
-    <div id="images"></div>
-    <div id="slides"></div>
-    <h3>to do:</h3>
-    <ul>
-      <li>"remove class dependency for slideshow</li>
-    </ul>
-    <form>
-
+    <h3>Registration</h3>
+    <form id="registration">
+      <label>Enter first name<input type="text" placeholder="first name" min=2 required></label>
+      <label>Enter last name<input type="text" placeholder="last name" min=2 required></label>
+      <label>Registration email address<input type="email" placeholder="email address" required></label>
+      <label>Enter your password<input type="password" required></label>
+      <label>Confirm your password<input type="password" required></label>
+      <label>Would you like to receive emails?<input type="checkbox" checked></label>
+      <button id="submit">submit</button>
     </form>
+    <h3>Slideshow</h3>
+    <div id="slides"></div>
+    <h3>Image Grid</h3>
+    <table>
+      <tr>
+        <td><img src="source/images/cat0.jpeg"></td>
+        <td><img src="source/images/cat1.jpeg"></td>
+        <td><img src="source/images/cat2.jpeg"></td>
+      </tr>
+      <tr>
+        <td><img src="source/images/cat3.jpeg"></td>
+        <td><img src="source/images/cat4.jpeg"></td>
+        <td><img src="source/images/cat5.jpeg"></td>
+      </tr>
+      <tr>
+        <td><img src="source/images/cat6.jpeg"></td>
+        <td><img src="source/images/cat7.jpeg"></td>
+        <td><img src="source/images/cat8.jpeg"></td>
+      </tr>
+    </table>
+    <p>To-Do list:</p>
+    <ul>
+      <li>Bootstrap Styling</li>
+      <li>load first hero image upon load</li>
+      <li>Account for superhero image-rotation image differences</li>
+      <li>mouse-over for image grid</li>
+      <li>make registration form pretty</li>
+      <li>customize validate.js</li>
+      <li>follow-up with Creative Circle &amp; Fell Swoop by voice regarding challenges &amp; solutions</li>
+    </ul>
 
 </body>
 </html>

@@ -1,15 +1,9 @@
 $(function() {
 
   // instiate empty array to contain image sources
-  var images = [];
-
-  // slideJS module parameters
-  $("#slides").slidesjs({
-    width: 640,
-    height: 480,
-    start: 1
-  })
-
+  images = [];
+  var current = 0;
+  var next = 1;
 
   // get images from flickr, push to array
   function getFlickr(e) {
@@ -46,15 +40,45 @@ $(function() {
 
   //loop through array, append images to html
   function imgToDom() {
-    // var htmlElem = $("slides");
+    console.log("imgToDom");
     for (var i=0; i<images.length; i++){
-      console.log("the var i is", images[i]);
-      $( "<img>" ).attr( "src", images[i] ).appendTo( "#slides" );
+      var image = $("<img>");
+      image.attr({
+        src: images[i],
+        "class": "hidden",
+        id: i
+      })
+      $("#slides").append(image);
     };
   };
+
+  // FadeOut current Image
+  function hideImage() {
+    $("#" + current).fadeOut(500);
+    current++;
+    if (current > images.length) {
+      current = 0
+    };
+    setTimeout(showImage, 500);
+  };
+
+  // FadeIn next Image
+  function showImage() {
+    $("#" + next).fadeIn(500);
+    next ++;
+    if (next > images.length) {
+      next = 0
+    };
+  };
+
+  // implmement for form validation
+  $("#submit").on("click", function() {
+    alert("sorry, that doesn't work!")
+  });
 
   getFlickr();
 
   console.log(images);
 
+  var intervalID = setInterval(hideImage, 5000)
 });
